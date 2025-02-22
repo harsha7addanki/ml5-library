@@ -31,6 +31,7 @@ import bodyPix from "./BodyPix";
 import neuralNetwork from "./NeuralNetwork";
 import faceApi from "./FaceApi";
 import kmeans from "./KMeans";
+import dbscan from "./DBSCAN";
 import cartoon from "./CartoonGAN";
 import universalSentenceEncoder from "./UniversalSentenceEncoder";
 import facemesh from "./Facemesh";
@@ -47,6 +48,7 @@ const withPreload = {
   featureExtractor,
   imageClassifier,
   kmeans,
+  dbscan,
   soundClassifier,
   pitchDetection,
   pix2pix,
@@ -72,7 +74,7 @@ const withPreload = {
   communityStatement();
 })();
 
-module.exports = Object.assign({ p5Utils }, preloadRegister(withPreload), {
+export default Object.assign({ p5Utils }, preloadRegister(withPreload), {
   KNNClassifier,
   communityStatement,
   ...imageUtils,
